@@ -1,7 +1,8 @@
 <?php
-$status="";
-$msg="";
 $city="";
+$status="";
+$message="";
+
 if(isset($_POST['submit'])){
     $city=$_POST['city'];
     $url="http://api.openweathermap.org/data/2.5/weather?q=$city&appid=49c0bad2c7458f1c76bec9654081a661";
@@ -11,10 +12,12 @@ if(isset($_POST['submit'])){
     $result=curl_exec($ch);
     curl_close($ch);
     $result=json_decode($result,true);
+    
     if($result['cod']==200){
         $status="yes";
-    }else{
-        $msg=$result['message'];
+    }
+    else{
+        $message=$result['message'];
     }
 }
 ?>
@@ -60,7 +63,7 @@ if(isset($_POST['submit'])){
       </style> 
    </head>
    <body>
-   <?php echo $msg?>
+   <?php echo $message?>
       <div class="input">
          <form method="post">
             <input type="text" class="text" placeholder="Enter city name" name="city" value="<?php echo $city?>"/>
