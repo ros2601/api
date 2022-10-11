@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
 <html lang="en" class=" -webkit-">
    <head>
       <meta charset="UTF-8">
-      <title>Weather Card</title>
+      <title>Weather/title>
        <style>
          body{
             background:lightyellow;
