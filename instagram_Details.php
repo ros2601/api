@@ -75,7 +75,7 @@ curl_close($curl);
        <?php
             if ($result) {
         ?>
-             <img src="<?php echo $result['external_url_linkshimmed']?>"/>
+            
              <p><b>Instagram ID: </b><?php echo $result['username'];?></p>
              <p><b>Username: </b><?php echo $result['full_name'];?></p>
              <p><b>Biography: </b><pre><?php echo $result['biography'];?></pre></p>
